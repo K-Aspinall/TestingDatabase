@@ -1,0 +1,27 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Simple CRUD operations
+GET         /                        controllers.Application.index()
+GET         /people/all              controllers.Application.list()
+POST        /people/created          controllers.Application.create()
+POST        /people/update           controllers.Application.update(id: Long)
+POST        /people/delete           controllers.Application.delete(id: Long)
+
+# JSON CRUD operations
+
+GET         /json                    controllers.Application.jsonindex()
+POST        /json/add                controllers.Application.modelToJSON()
+GET         /json/all                controllers.Application.modelToJSON()
+
+# JSON no ID CRUD operations
+
+GET         /jsonNoId                controllers.Application.jsonNoIdIndex()
+POST        /jsonNoId/addNoId        controllers.Application.jsonNoId()
+GET         /jsonNoId/equalitycheck  controllers.Application.jsonNoIdEquality()
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file            controllers.Assets.versioned(path="/public", file: Asset)

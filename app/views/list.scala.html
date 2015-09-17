@@ -1,0 +1,35 @@
+@(people: List[Person])
+
+<style>
+    td{
+    text-align : center ;
+    }
+</style>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+  </tr>
+
+  @for(Person <- people){
+      <script>
+
+      function updatePromptFunction(){
+        var upName = prompt("Please enter new name", "");
+
+        if(upName != null){
+        }
+      }
+
+      </script>
+      <tr>
+        <td>@Person.id</td>
+        <td>@Person.name</td>
+
+          <td>
+              @helper.form(action = routes.Application.delete(Person.id), 'id -> "deleteForm"){
+                  <input type="submit" class="btn primary" value="Delete">}
+          </td>
+      </tr>
+  }
+</table>

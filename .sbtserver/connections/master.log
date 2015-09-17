@@ -1,0 +1,28 @@
+New log file opened at Thu Sep 17 15:17:04 BST 2015 by 31116@DESKTOP-76P66B3
+Taking next connection to: 58063
+New client attempting to connect on port: 58064-58063
+  Address = /192.168.119.1:58063
+This client on port 58064 has uuid 927de1cf-584d-493a-a6dc-0bf349d459f5 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-927de1cf-584d-493a-a6dc-0bf349d459f5
+Taking next connection to: 58063
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58063
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58063
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58063
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58063
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58063
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 31116@DESKTOP-76P66B3 logs at Thu Sep 17 15:35:05 BST 2015, goodbye.

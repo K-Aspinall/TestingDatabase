@@ -1,0 +1,24 @@
+@(json: List[JSONPerson])
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>JSON</th>
+    </tr>
+    @for(jperson <- json){
+      <tr>
+        <td>@jperson.id</td>
+        <td>@jperson.data</td>
+    }
+  </table>
+  @helper.form(action = routes.Application.modelToJSON(), 'id -> "toJSONButton"){
+  <input type="submit" class="btn primary" value="Convert to JSON">}
+</body>
+</html>

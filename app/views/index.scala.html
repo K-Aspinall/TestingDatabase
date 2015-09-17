@@ -1,0 +1,50 @@
+@(personForm: Form[Person], people: List[Person])
+
+@main("Main Form") {
+
+        <h2>Add a name</h2>
+        @helper.form(action = routes.Application.create(), 'id -> "personForm"){
+            @helper.inputText(personForm("name"))
+            <input type="submit" class="btn primary" value="Add">
+        }
+}
+<br>
+<style>
+body {
+font: normal medium/1.4 sans-serif;
+}
+table {
+border-collapse: collapse;
+width: 50%;
+}
+th, td {
+padding: 0.25rem;
+text-align: center;
+border: 1px solid #ccc;
+}
+tbody tr:nth-child(odd) {
+background: #eee;
+}
+</style>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+
+    @for(Person <- people){
+        <tr>
+            <td>@Person.id</td>
+            <td>@Person.name</td>
+            <td>
+            @helper.form(action = routes.Application.delete(Person.id), 'id -> "deleteForm"){
+                <input type="submit" class="btn primary" value="Delete">}
+            </td>
+            <td>
+            @helper.form(action = routes.Application.update(Person.id), 'id -> "updateForm"){
+                @helper.inputText(personForm("name"))
+                <input type="submit" class="btn primary" value="update">}
+            </td>
+        </tr>
+    }
+</table>
